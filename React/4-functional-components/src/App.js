@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Box from './Box';
 import Greet from './Greet';
 
@@ -22,6 +22,7 @@ const App = (props) => {
       )
     })
   }
+
   return (
     <div className="container">
       <div className="card">
