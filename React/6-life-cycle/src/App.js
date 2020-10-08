@@ -11,11 +11,12 @@ class App extends Component {
   greet(msg) {
     this.setState({ msg: msg })
   }
+  
   componentDidMount(){
     console.log("APP:: componentDidMount");
     setTimeout(() => {
       let response ='Hello React';
-     // this.setState({ msg: response})
+     //this.setState({ msg: response})
     },2000)
   }
 
@@ -34,11 +35,13 @@ class App extends Component {
             <button onClick={e=>this.greet('Good Morning')} className="btn btn-primary" style={{ margin: '5px' }}>Good Morming</button>
             <button onClick={e=>this.greet('Good Afternoon')} className="btn btn-primary" style={{ margin: '5px' }}>Good Afternoon</button>
             <button onClick={e=>this.greet('Good Evening')} className="btn btn-primary" style={{ margin: '5px' }}>Good Evening</button>
+            <button onClick={e=>this.greet('')} className="btn btn-danger" style={{ margin: '5px' }}>Remove</button>
+
           </div>
         </div>
         <hr />
 
-        <Greet msg={msg} />
+       {msg?<Greet msg={msg}/>:null}
 
       </div>
     );
