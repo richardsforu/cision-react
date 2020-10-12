@@ -1,4 +1,5 @@
 import React,{useEffect, useState} from 'react';
+import axios from 'axios';
 
 
 const UserForm = e => {
@@ -11,11 +12,18 @@ const UserForm = e => {
 
 const handleSubmit = (e) => {
     
+  /*
     fetch('http://localhost:8080/api/users',{method: 'POST',body: JSON.stringify(user),headers: {'Content-Type':'application/json'}})
     .then(response => response.json())
     .then(savedUser =>{
         console.log(savedUser);
+    }) */
+
+    axios.post('http://localhost:8080/api/users',user)
+    .then(response => console.log(response.data)>{
     })
+    
+
     e.preventDefault();
 
 }

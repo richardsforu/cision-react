@@ -1,17 +1,14 @@
-import React,{useEffect,useState} from 'react';
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-import Welcome from './components/Welcome';
+import Home from './components/Home';
 
 const App = () => {
-  
-
   return (
     <div className="container">
 
-     
-    <Welcome/>
-      
+      <h1>React Crud Operations</h1> <hr />
+      <Home />
+
     </div>
   );
 };
