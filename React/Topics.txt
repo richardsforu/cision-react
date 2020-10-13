@@ -1,0 +1,20 @@
+1. React (Core)
+----------------
+    - What is Component?
+    - props and state
+    - life-cycle methods
+    - inter component communications
+    - forms and validations
+    - Routers (SPA)
+    - Context
+    - container components
+    - High order components (not very imp)
+    - redux
+
+2. React third  party libraries
+
+
+
+
+
+

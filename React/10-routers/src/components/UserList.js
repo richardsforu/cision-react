@@ -27,9 +27,8 @@ const UserList = ({history,match}) => {
     }, [])
 
     function deleteUser(){
+        
        
-
-
     }
     const renderUsers = () => {
         console.log(">>> render user");
