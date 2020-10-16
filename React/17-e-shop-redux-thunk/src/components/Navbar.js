@@ -1,12 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom'
-import { useSelector, useDispatch } from 'react-redux'
 import CartBadge from './CartBadge';
-import NavBar from './Navbar'
 
 const Navbar = ({title}) => {
-
-
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -24,15 +20,11 @@ const Navbar = ({title}) => {
                         </li>
                         <li className="nav-item active">
                             <NavLink className="nav-link" to="/cart">Cart</NavLink>
-                        </li>
-                        
+                        </li> 
                     </ul>
                     <CartBadge />
                 </div>
-
             </nav>
-
-
         </div>
     );
 };

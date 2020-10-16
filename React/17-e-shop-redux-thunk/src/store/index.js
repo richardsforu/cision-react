@@ -1,19 +1,14 @@
 import {createStore,applyMiddleware,compose} from 'redux'
 import rootReducer from '../reducers'
 import thunk from 'redux-thunk'
-//import {items} from './actions';
 
 const initialState ={ 
-  
-
 }
 
-const composeEnhancers=
-typeof window ==='object' &&
-window.__REDUX_DEVTOOLS_EXTENSION__COMPOSE_ ?
-window.__REDUX_DEVTOOLS_EXTENSION__COMPOSE_({
-
-}):compose
+const composeEnhancers =
+typeof window === 'object' &&
+  (window).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ?
+  (window).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({}) : compose;
 
 const enhancer=composeEnhancers(applyMiddleware(thunk));
 

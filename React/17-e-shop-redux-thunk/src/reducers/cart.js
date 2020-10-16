@@ -1,8 +1,6 @@
 export function cartReducer(state = {}, action) {
     console.log('>>> cart reducer');
     let { type } = action
-    console.log(action);
-
     switch (type) {
         case 'CHECKOUT': {
             //.....
@@ -14,9 +12,8 @@ export function cartReducer(state = {}, action) {
             let cartLine = state[id];
             if (!cartLine) {
                 cartLine = { item, qty:1}
-
             } else {
-                cartLine = { item, qty: cartLine.qty * qty }
+                cartLine = { item, qty: cartLine.qty + qty }
             }
             if (cartLine.qty === 0) {
                 delete state[id]

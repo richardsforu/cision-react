@@ -12,16 +12,14 @@ const ItemList = ({ history }) => {
         dispatch(loadItems('ele', 2))
     }, [])
 
-
     const renderItems = (items) => {
         return items.map((item => {
-            let cartLine = cart[items.id] || {}
+            let cartLine = cart[item.id] || {}
             let cartItemQty = cartLine.qty || 0
             return (
                 <div key={item.id}>
                     <div className="list-group-item">
                         <Item value={item} cartItemQty={cartItemQty} history={history} />
-
                     </div>
                 </div>
             )
@@ -35,9 +33,6 @@ return (
         <div className="list-group">
            {renderItems(items)}
         </div>
-
-
-
     </div>
 );
 };
